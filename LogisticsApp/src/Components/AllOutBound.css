@@ -1,0 +1,34 @@
+/* AllOutBound.css */
+.all-outbound-container {
+  margin-top: 20px;
+}
+
+.search-bar {
+  margin-bottom: 10px;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.custom-table th, .custom-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.custom-table th {
+  background-color: #f2f2f2;
+}
+
+.pagination {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.pagination span {
+  margin-right: 10px;
+}

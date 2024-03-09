@@ -1,0 +1,26 @@
+/* usertype.css */
+
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px; /* Adjust the font size as needed */
+  font-weight: bold; /* Make the font bold */
+  padding: 15px; /* Adjust the padding as needed */
+}
+
+.list-group-item label {
+  margin-bottom: 0; /* Remove default margin to align with the checkbox */
+}
+
+.list-group-item input {
+  align-self: flex-start; /* Align the checkbox to the start of the box */
+  transform: translateY(50%); /* Center the checkbox vertically */
+  margin-left: 10px; /* Adjust the margin as needed */
+  transform: scale(1.5); /* Adjust the checkbox size as needed */
+}
+
+.btn-primary {
+  font-size: 20px; /* Adjust the font size as needed */
+  padding: 15px 20px; /* Adjust the padding as needed */
+}
