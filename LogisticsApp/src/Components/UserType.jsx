@@ -37,7 +37,7 @@ const UserType = () => {
       // Example: Navigating based on the selected user type
       switch (userType) {
         case "SUPER-ADMIN":
-          navigate("/superadmin/companies");
+          navigate("/superadmin/");
           break;
         case "DISPATCHER":
           navigate("/dispatcher/transporters");

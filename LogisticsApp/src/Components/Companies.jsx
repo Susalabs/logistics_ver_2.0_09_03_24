@@ -1,6 +1,6 @@
 import React from "react";
 import "./Compaines.css";
-import SuperAdminLayout from "./Layouts/SuperAdminLayout";
+
 
 
 export default function Companies() {
@@ -15,7 +15,7 @@ export default function Companies() {
 
   return (
     <>
-      <SuperAdminLayout />
+  
       
       <div className="custom-table-container">
         <h1>Compaines</h1>

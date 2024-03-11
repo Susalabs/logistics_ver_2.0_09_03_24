@@ -19,33 +19,42 @@ import TransportersHome from "./Components/DashBoard/TransportersHome";
 import NotFoundPage from "./Components/NotFoundPage";
 import ForgetPassword from "./Components/ForgetPassword";
 import SuperAdminLayout from "./Components/Layouts/SuperAdminLayout";
+import MainLayout from "./Components/DashBoard/MainLayout";
 
 export default function Routings() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/login" element={<Superadminlogin />} />
+
+        <Route path="/superlogin" element={<Superadminlogin />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/company-info" element={<Companyinfo />} />
         <Route path="/usertype" element={<UserType />} />
+
         <Route path="/outbound" element={<Outbound />} />
 
-        <Route path="/superadmin/">
-          <Route path="companies" element={<Companies />} />
-          <Route path="alloutbound" element={<AllOutBound />} />
-          <Route path="dispatchmanagement" element={<DispatchManagement />} />
+        <Route path="/superadmin/" element={<MainLayout />}>
+          <Route index element={<TransportersHome />} />
+          <Route path="superadmin/companies" element={<Companies />} />
+
+          <Route path="superadmin/alloutbound" element={<AllOutBound />} />
+          <Route
+            path="superadmin/dispatchmanagement"
+            element={<DispatchManagement />}
+          />
         </Route>
 
-        <Route path="/dispatcher/" >
-        <Route path="allWarehouses" element={<AllWareHouses />} />
-        <Route path="transporters" element={<Transporters />} />
-        <Route path="managetransporters" element={<ManageTransporters />} />
+        <Route path="/dispatcher/">
+          <Route path="allWarehouses" element={<AllWareHouses />} />
+          <Route path="transporters" element={<Transporters />} />
+          <Route path="managetransporters" element={<ManageTransporters />} />
         </Route>
 
         <Route path="/rejections" element={<Rejections />} />
         <Route path="/forgot-password" element={<ForgetPassword />} />
         <Route path="*" element={<NotFoundPage />} />
+
         <Route
           path="/inventorymanagementdashboard"
           element={<InventoryManagementDashboard />}
@@ -54,20 +63,11 @@ export default function Routings() {
           path="/scrapmanagementdashboard"
           element={<ScrapManagementDashboard />}
         />
-        <Route
-          path="/transportershome/dashboard"
-          element={<TransportersHome />}
-        />
+        <Route path="companies" element={<Companies />} />
+
         <Route path="/transportershome/:id" element={<TransportersHome />} />
       </Routes>
     </BrowserRouter>
   );
 }
 
-function DispatcherRoutes() {
-  return (
-    <>
- 
-    </>
-  );
-}
