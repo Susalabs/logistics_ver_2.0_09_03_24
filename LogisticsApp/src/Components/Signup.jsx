@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Signup.css"; // Import your custom CSS file
+import { FaTruckFast } from "react-icons/fa6";
+import { IconContext } from "react-icons";
 
 export default function Signup() {
   const [username, setUsername] = useState("");
@@ -37,6 +39,20 @@ export default function Signup() {
   return (
     <div className="signup-container">
       <form className="signup-form" onSubmit={handleSubmit}>
+        <IconContext.Provider
+          value={{
+            color: "darkblue",
+            className: "global-class-name",
+            margin: "10px",
+            fontSize: "24px", // Increase the font size
+          }}
+        >
+          {" "}
+          <h1 style={{ margin: "10px" }}>
+            {" "}
+            <FaTruckFast />
+          </h1>
+        </IconContext.Provider>
         <h2 className="form-title">Logistic Project</h2>
 
         <label>Username</label>

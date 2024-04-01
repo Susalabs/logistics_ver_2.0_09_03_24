@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Login.css"; // Import your external CSS file
+import { FaTruckFast } from "react-icons/fa6";
+import { IconContext } from "react-icons";
 
 export default function Login() {
   const [pin, setPin] = useState("");
@@ -32,6 +34,20 @@ export default function Login() {
   return (
     <div className="login-container">
       <form className="login-form" onSubmit={handleSubmit}>
+        <IconContext.Provider
+          value={{
+            color: "darkblue",
+            className: "global-class-name",
+            margin: "10px",
+            fontSize: "24px", // Increase the font size
+          }}
+        >
+          {" "}
+          <h1 style={{ margin: "10px" }}>
+            {" "}
+            <FaTruckFast />
+          </h1>
+        </IconContext.Provider>
         <h2 className="form-title">Logistic Project</h2>
 
         <label>PIN</label>

@@ -2,6 +2,8 @@ import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 import React from "react";
 import { Table } from "antd"; 
+import ApexChart from "./Chart/Chart";
+// import ChartComponent from "./Chart/Chart";
 
 const columns = [
   {
@@ -171,6 +173,11 @@ function GroupExample() {
             </Card.Footer>
           </Card>
         </CardGroup>
+      </div>
+      <div>
+        <h1>Chart</h1>
+        {/* <ChartComponent/> */}
+        <ApexChart/>
       </div>
       <div className="tables">
         {" "}

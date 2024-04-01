@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Superadminlogin.css";
+import { FaTruckFast } from "react-icons/fa6";
+import { IconContext } from "react-icons";
 
 export default function Superadminlogin() {
   const submitForm = (e) => {
@@ -11,6 +13,20 @@ export default function Superadminlogin() {
   return (
     <div className="login-container">
       <form className="login-form" onSubmit={submitForm}>
+        <IconContext.Provider
+          value={{
+            color: "darkblue",
+            className: "global-class-name",
+            margin: "10px",
+            fontSize: "24px", // Increase the font size
+          }}
+        >
+          {" "}
+          <h1 style={{ margin: "10px" }}>
+            {" "}
+            <FaTruckFast />
+          </h1>
+        </IconContext.Provider>
         <h2 className="form-title">Welcome Back!</h2>
         <h1 className="form-subtitle">Please Sign In</h1>
 

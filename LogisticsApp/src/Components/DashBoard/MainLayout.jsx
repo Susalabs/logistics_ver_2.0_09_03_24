@@ -8,6 +8,8 @@ import {
 } from "@ant-design/icons";
 import { IconContext } from "react-icons";
 import DropdownButton from "react-bootstrap/DropdownButton";
+import { FiMapPin } from "react-icons/fi";
+import { RxDashboard } from "react-icons/rx";
 import { IoIosNotifications } from "react-icons/io";
 import { Layout, Menu, Button } from "antd";
 import { FaTruckFast } from "react-icons/fa6";
@@ -46,33 +48,51 @@ const MainLayout = () => {
         <div className="demo-logo-vertical" />
         <br></br>
 
-        <Menu
-          theme="dark"
-          mode="inline"
-          defaultSelectedKeys={["1"]}
-          items={[
-            {
-              key: "alloutbound",
-              icon: <UserOutlined />,
-              label: "alloutbound",
-            },
-            {
-              key: "dispatchmanagement",
-              icon: <VideoCameraOutlined />,
-              label: "dispatchmanagement",
-            },
-            {
-              key: "companies",
-              icon: <UploadOutlined />,
-              label: "companies",
-            },
-            {
-              key: "4",
-              icon: <UploadOutlined />,
-              label: "sccdxzc 3",
-            },
-          ]}
-        />
+        <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
+          <Menu.Item
+            key="dashboard"
+            icon={<RxDashboard />}
+            onClick={() => navigate("/superadmin")}
+          >
+            DashBoard
+          </Menu.Item>
+          <Menu.Item
+            key="reports"
+            icon={<UploadOutlined />}
+            onClick={() => navigate("/superadmin/reports")}
+          >
+            Reports
+          </Menu.Item>
+          <Menu.Item
+            key="dispatchmanagement"
+            icon={<VideoCameraOutlined />}
+            onClick={() => navigate("/superadmin/dispatchmanagement")}
+          >
+            Dispatch Management
+          </Menu.Item>
+          <Menu.Item
+            key="companies"
+            icon={<UploadOutlined />}
+            onClick={() => navigate("/superadmin/companies")}
+          >
+            Companies
+          </Menu.Item>
+
+          <Menu.Item
+            key="maps"
+            icon={<FiMapPin />}
+            onClick={() => navigate("/superadmin/maps")}
+          >
+            Maps
+          </Menu.Item>
+          <Menu.Item
+            key="signin"
+            icon={<UserOutlined />}
+            onClick={() => navigate("/superadmin/signin")}
+          >
+            Accounts
+          </Menu.Item>
+        </Menu>
       </Sider>
 
       <Layout>

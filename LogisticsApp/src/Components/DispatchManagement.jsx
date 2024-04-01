@@ -18,7 +18,7 @@ export default function DispatchManagement() {
 
   return (
     <>
-      <SuperAdminLayout />
+
       <div className="dispatch-management-container">
         <h1>Dispatch Management</h1>
 

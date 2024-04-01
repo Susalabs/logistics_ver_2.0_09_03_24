@@ -20,6 +20,8 @@ import NotFoundPage from "./Components/NotFoundPage";
 import ForgetPassword from "./Components/ForgetPassword";
 import SuperAdminLayout from "./Components/Layouts/SuperAdminLayout";
 import MainLayout from "./Components/DashBoard/MainLayout";
+import Reports from "./Components/Reports";
+import Map from "./Components/DashBoard/Chart/Maps";
 
 export default function Routings() {
   return (
@@ -27,22 +29,21 @@ export default function Routings() {
       <Routes>
         <Route path="/" element={<Login />} />
 
-        <Route path="/superlogin" element={<Superadminlogin />} />
+        <Route path="/login" element={<Superadminlogin />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/company-info" element={<Companyinfo />} />
         <Route path="/usertype" element={<UserType />} />
 
         <Route path="/outbound" element={<Outbound />} />
 
-        <Route path="/superadmin/" element={<MainLayout />}>
+        <Route path="/superadmin" element={<MainLayout />}>
           <Route index element={<TransportersHome />} />
-          <Route path="superadmin/companies" element={<Companies />} />
+          <Route path="reports" element={<Reports />} />
+          <Route path="companies" element={<Companies />} />
+          <Route path="maps" element={<Map/>} />
 
-          <Route path="superadmin/alloutbound" element={<AllOutBound />} />
-          <Route
-            path="superadmin/dispatchmanagement"
-            element={<DispatchManagement />}
-          />
+          <Route path="alloutbound" element={<AllOutBound />} />
+          <Route path="dispatchmanagement" element={<DispatchManagement />} />
         </Route>
 
         <Route path="/dispatcher/">
@@ -63,7 +64,6 @@ export default function Routings() {
           path="/scrapmanagementdashboard"
           element={<ScrapManagementDashboard />}
         />
-        <Route path="companies" element={<Companies />} />
 
         <Route path="/transportershome/:id" element={<TransportersHome />} />
       </Routes>
