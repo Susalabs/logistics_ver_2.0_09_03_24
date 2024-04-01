@@ -1,6 +1,5 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const locationRoutes = require("./routes/locationRoutes");
 const cors = require("cors");
 const helmet = require("helmet");
 const app = express();
@@ -14,6 +13,7 @@ app.use(cors());
 
 app.use(helmet());
 const connectDB = require("./config");
+const locationRoutes = require("./routes/locationRoutes");
 
 try {
   connectDB()
