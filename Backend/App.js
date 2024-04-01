@@ -1,10 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const connectDB = require("./config");
 const locationRoutes = require("./routes/locationRoutes");
 const cors = require("cors");
 const helmet = require("helmet");
-
 const app = express();
 const port = 5000;
 app.use(express.json());
@@ -15,9 +13,22 @@ app.use(cors());
 
 
 app.use(helmet());
+const connectDB = require("./config");
+
+try {
+  connectDB()
+    .then(() => {
+      console.log("Connected to MongoDB Atlas");
+    })
+    .catch((error) => {
+      console.error("MongoDB Atlas connection error:", error);
+      process.exit(1);
+    });
+} catch (err) {
+  console.log(err);
+}
 
 
-connectDB();
 
 
 app.use("/location", locationRoutes);
