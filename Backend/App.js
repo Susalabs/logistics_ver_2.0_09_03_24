@@ -21,6 +21,10 @@ connectDB();
 
 
 app.use("/location", locationRoutes);
+app.use("/get", (req, res) => {
+    
+    res.send("Api are working");
+})
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
