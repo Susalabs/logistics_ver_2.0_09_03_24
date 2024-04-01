@@ -14,7 +14,7 @@ app.use(cors());
 app.use(helmet());
 
 const locationRoutes = require("./Routes/locationRoutes");
-const connectDB = require("./config");
+const connectDB = require("./Config");
 
 
 try {
