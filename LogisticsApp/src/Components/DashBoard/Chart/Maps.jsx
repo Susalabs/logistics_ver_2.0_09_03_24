@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 
 function Map() {
   const mapRef = useRef(null);
-
+  const API = "AIzaSyBRmqVtkujBc7IabQceqEuzZoAZ22GxGlE";
   useEffect(() => {
     function initMap() {
       if (!window.google) {
@@ -14,6 +14,8 @@ function Map() {
         center: { lat: 40.7128, lng: -74.006 },
         zoom: 10,
       });
+  
+ 
 
       new window.google.maps.Marker({
         position: { lat: 40.7128, lng: -74.006 },
@@ -24,7 +26,7 @@ function Map() {
 
     if (!window.google) {
       const script = document.createElement("script");
-      script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap`;
+      script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyBRmqVtkujBc7IabQceqEuzZoAZ22GxGlE&callback=initMap`;
       script.defer = true;
       script.async = true;
       script.onerror = () => {

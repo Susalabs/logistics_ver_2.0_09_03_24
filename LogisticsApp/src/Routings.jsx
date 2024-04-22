@@ -22,6 +22,10 @@ import SuperAdminLayout from "./Components/Layouts/SuperAdminLayout";
 import MainLayout from "./Components/DashBoard/MainLayout";
 import Reports from "./Components/Reports";
 import Map from "./Components/DashBoard/Chart/Maps";
+import DrivingRoute from "./Reports/DrivingReports/DrivingRoute";
+import MilageReports from "./Reports/DrivingReports/MilageReports";
+import RouteDeviated from "./Reports/DrivingReports/RouteDeviated";
+import DriverReport from "./Reports/DrivingReports/DriverReport";
 
 export default function Routings() {
   return (
@@ -30,6 +34,7 @@ export default function Routings() {
         <Route path="/" element={<Login />} />
 
         <Route path="/login" element={<Superadminlogin />} />
+    
         <Route path="/signup" element={<Signup />} />
         <Route path="/company-info" element={<Companyinfo />} />
         <Route path="/usertype" element={<UserType />} />
@@ -40,8 +45,12 @@ export default function Routings() {
           <Route index element={<TransportersHome />} />
           <Route path="reports" element={<Reports />} />
           <Route path="companies" element={<Companies />} />
-          <Route path="maps" element={<Map/>} />
+          <Route path="maps" element={<Map />} />
+          <Route path="drivingreportroute" element={<DrivingRoute />} />
+          <Route path="MilageReports" element={<MilageReports />} />
+          <Route path="DriverReport" element={<DriverReport />} />
 
+          <Route path="RouteDeviated" element={<RouteDeviated />} />
           <Route path="alloutbound" element={<AllOutBound />} />
           <Route path="dispatchmanagement" element={<DispatchManagement />} />
         </Route>
@@ -70,4 +79,3 @@ export default function Routings() {
     </BrowserRouter>
   );
 }
-

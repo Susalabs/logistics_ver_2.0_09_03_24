@@ -34,6 +34,8 @@ try {
 
 
 app.use("/location", locationRoutes);
+app.use("/", locationRoutes);
+
 app.use("/get", (req, res) => {
     
     res.send("Api are working");
